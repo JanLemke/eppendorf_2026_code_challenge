@@ -2,7 +2,7 @@
 #include "event.hpp"
 #include "tasks.hpp"
 
-static uint64_t button_pressed{};
+static uint64_t button_pressed;
 
 extern "C" void pin_interrupt_isr() {
     uint64_t pin_number = get_pin_number();
