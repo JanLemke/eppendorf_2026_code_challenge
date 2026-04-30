@@ -1,5 +1,5 @@
-#include "event.hpp"
 #include <os.hpp>
+#include "event.hpp"
 #include "tasks.hpp"
 
 static uint64_t button_pressed{};
