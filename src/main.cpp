@@ -2,6 +2,8 @@
 #include "event.hpp"
 #include "tasks.hpp"
 
+#define INTERSTING_NUMBER 42 //This is the interesting number
+
 static uint64_t button_pressed;
 
 extern "C" void pin_interrupt_isr() {
@@ -14,10 +16,10 @@ void startup() {
 
     static task first_task([] {
         while (true) {
-            static uint64_t interesting_button = 42;
+            static uint64_t interesting_button = INTERSTING_NUMBER;
 
             if (button_pressed == interesting_button) {
-            ButtonEvent* event = new ButtonEvent(42);
+            ButtonEvent* event = new ButtonEvent(INTERSTING_NUMBER);
             send_event(event);
             }
 
