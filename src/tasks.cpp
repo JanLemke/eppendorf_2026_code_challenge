@@ -1,11 +1,11 @@
 #include "tasks.hpp"
 
-Tasks::Tasks()
+task::task()
 {
 
 }
 
-Tasks::~Tasks()
+task::~task()
 {
 
 }
